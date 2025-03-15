@@ -1,0 +1,48 @@
+proxies:
+#=================================================
+- name: Trojan-Vidio
+  type: trojan
+  server: vidios.xtls.my.id
+  port: 443
+  password: 95f17526-5b9c-4b01-844a
+  udp: true
+  sni: vpn.aryobrokolly.my.id
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: vpn.aryobrokolly.my.id
+#=================================================
+- name: Vmess-vidio
+  type: vmess
+  server: vidios.xtls.my.id
+  port: 443
+  uuid: 95f17526-5b9c-4b01-844a
+  alterId: 0
+  cipher: auto
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  servername: vpn.aryobrokolly.my.id
+  network: ws
+  ws-opts:
+    path: /vmws
+    headers:
+      Host: vpn.aryobrokolly.my.id
+#=================================================
+- name: Vless-Ntls
+  type: vless
+  server: vidios.xtls.my.id
+  port: 443
+  uuid: e1e8d130-f908-11ef-a18e-1239d0255272
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  servername: sg3.socifiles.com
+  network: ws
+  ws-opts:
+    path: /vlws
+    headers:
+      Host: sg3.socifiles.com
+#=================================================
